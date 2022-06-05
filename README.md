@@ -2,7 +2,7 @@
 
 In this course you will learn how to use Python in Blender and then how to create a basic plugin.
 
-**This tutorial was made in 3.1.2 Blender version.**
+> This tutorial was made in 3.1.2 Blender version.
 
 ---
 
@@ -10,6 +10,8 @@ Open new project, select general, press A, then X.
 Now we have an empty project but there is one more thing - click *Edit* -> *Interface* -> *Display* and make sure *Python Tooltips* option is enabled.
 
 Now navigate to the *Scripting* tab. Here by default 3 new sections should appear - Python console, Info (displays every Python function that is executed when using Blender) and text editor.
+
+In *Render Properties* (camera icon in the bottom right panel) when using Eevee makes sure to enable **Bloom**.
 
 ![Scripting tab](./img/img1.png)
 
@@ -53,6 +55,7 @@ Now lets delete the cube and click on the *New* button in *Text Editor* section.
 
 We will be creating a unique square grid of cubes that will be generated based on user's input value.
 I will begin by importing required libraries and creating two new materials.
+The code below will check if a materials with a given names exist. If they don't, new materials will be created.
 
     import bpy
     import random
@@ -81,6 +84,12 @@ I will begin by importing required libraries and creating two new materials.
         steel_mat = bpy.data.materials.new(name = "material_steel")
         steel_mat.metallic = 1.0
         steel_mat.roughness = 0.0
+
+This is how the *material_red* looks like in the Shading tab.
+
+![Red Material in Shading Tab](./img/img2.png)
+
+As you can see Principled BSDF was disconnected in order to connect Emission that makes our cube glow.
 
 After material setup lets add some cubes to our scene.
 
