@@ -138,6 +138,12 @@ We need to perform these steps:
 In the end your code should look similar to [this code](./square_grid.py).
 Save the file, then press F3, search for Simple Object Operator, click it and a little box should appear where you can change definied properties (in this case square size).
 
+## ***Extra*** - Importing HDRIs
+
+Go to *Shading* tab, select world in *Shader Editor* (panel at the bottom). Press Ctrl+A and search for *Environment Texture*.
+Then connect color to color. Click open in *Image Texture* node and search for your HDRIs.
+You can download nice HDRIs from [here](https://polyhaven.com/).
+
 # Summary
 
 Scripting in Blender is pretty powerful, you can create amazing and much more advanced things. This was just a quick overview so do not worry if you feel overwhelmed. If you didn't really undertand creating materials I encourage you to check out *Shading* tab and play with it. We also used Simple Operator - you can think of it like template for our code to make it more pleasurable to use.
